@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks 1 to 5</title>
+</head>
+<body>
+    
+    <!-- Task 1: User Registration Form with Validation -->
+    <h1>Welcome to WSP</h1>
+    <h3>Manage, Streamline and Thrive Effortlessly</h3>
+    <form action="/submit_registration" method="post">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <input type="checkbox" id="remember_me" name="remember_me">
+        <label for="remember_me">Remember me</label>
+        <a href="#" style="margin-left: 10px;">Login with Code</a><br><br>
+
+        <input type="submit" value="Sign in">
+    </form>
+
+    <script>
+        // Task 1: Validation for Password Match
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function(event) {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm_password').value;
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                event.preventDefault();
+            }
+        });
+    </script>
+
+    <!-- Task 2: Video and Audio Player -->
+    <h2>Customer Testimony Video</h2>
+    <video width="320" height="240" controls>
+        <source src="sample-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <h2>Audio Player</h2>
+    <audio controls>
+        <source src="sample-audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Task 3: SVG Icon -->
+    <h2>Discover WHY Orderific is
+        Your Restaurant's Best Friend</h2>
+    <img src="https://orderific.com/ord-website/assets/img/hero-section/hero-sm.webp" alt="" class="mob-img1">
+
+    <!-- Task 4: Embedded YouTube Video -->
+    <h2>Embedded YouTube Video</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/watch?v=dL9Ey1mQT0k" frameborder="0" allowfullscreen></iframe>
+
+</body>
+</html>
