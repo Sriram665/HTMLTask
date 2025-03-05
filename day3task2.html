@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Exercise</title>
+    <style>
+        /* Click button styling */
+        .click-button {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Popup container styling */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Popup content styling */
+        .popup-content {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 280px;
+            text-align: left;
+            box-shadow: 0 4px 40px rgba(0, 0, 0, 0.4);
+            position: relative;
+        }
+
+        .popup-content h2 {
+            font-size: 18px;
+            color: #000;
+            margin-bottom: 20px;
+        }
+
+        .para {
+            font-size: 15px;
+            color: #000;
+            margin-bottom: 10px;
+        }
+
+        /* Box for Tasty Burger and its size */
+        .item-box {
+            border: 1px solid #ccc;
+            padding: 8px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .popup-content strong {
+            font-weight: bold;
+        }
+
+        .para2 {
+            font-size: 15px;
+            color: #474444;
+            margin-bottom: 10px;
+            margin-top: 0px;
+        }
+
+        .cancel-button {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 10px 87px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            color: #000;
+            cursor: pointer;
+            border: none;
+            background: none;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            box-shadow: 0 4px 40px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Display & Positioning Exercises</h1>
+
+    <div class="button-container">
+        <button class="click-button" id="openPopup">Click here to See the popup</button>
+    </div>
+
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <button class="close-button" id="closePopup">×</button>
+            <h2>Cancel Item</h2>
+            <p class="para">Are you sure to cancel this item?</p>
+            <div class="item-box">
+                <p class="sub-para"><strong>Tasty Burger</strong></p>
+                <p class="para2">Size: Small, Cheese: A little bit, Salt: No</p>
+            </div>
+            <button class="cancel-button">Cancel Item</button>
+        </div>
+    </div>
+
+    <script>
+        // Get references to the popup and buttons
+        const popup = document.getElementById('popup');
+        const openPopupButton = document.getElementById('openPopup');
+        const closePopupButton = document.getElementById('closePopup');
+
+        // Function to open the popup
+        openPopupButton.addEventListener('click', () => {
+            popup.style.display = 'flex'; /* Use flexbox to center the popup */
+        });
+
+        // Function to close the popup
+        closePopupButton.addEventListener('click', () => {
+            popup.style.display = 'none';
+        });
+
+        // Optional: Close the popup when clicking outside of it
+        window.addEventListener('click', (event) => {
+            if (event.target === popup) {
+                popup.style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
+</html>
