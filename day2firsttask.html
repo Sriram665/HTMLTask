@@ -113,6 +113,40 @@
             line-height: 1.4;
         }
 
+         /* Task 10: Style form elements using different border styles */
+         input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid var(--primary-color);
+            border-radius: 5px;
+        }
+
+        /* Task 13: Apply letter-spacing and line-height adjustments for readability */
+        p {
+            letter-spacing: 0.5px;
+            line-height: 1.8;
+        }
+
+        /* Task 14: Create a notification badge with bell icon using CSS */
+        .notification {
+            position: relative;
+            display: inline-block;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .notification .badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: red;
+            color: white;
+            font-size: 12px;
+            padding: 5px 8px;
+            border-radius: 50%;
+        }
+
         footer {
             background: var(--secondary-color);
             color: var(--text-color);
@@ -138,6 +172,9 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
+            <div class="notification">
+                🔔
+                <span class="badge">3</span>
         </div>
     </header>
 
