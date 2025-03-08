@@ -10,7 +10,7 @@
             --primary-color: #ff9900;
             --secondary-color: #333;
             --text-color: #fff;
-            --background-gradient: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            --background-gradient: url('https://shop.lonelyplanet.com/cdn/shop/files/LP_HomePage_CategoryImages_1_800x.png?v=1614288772') no-repeat center center/cover;
         }
 
         body {
@@ -26,17 +26,13 @@
         }
 
         header {
-            background: var(--secondary-color);
+            background: url('https://www.gtholidays.in/wp-content/uploads/2022/02/International-Honeymoon-Packages-370x375.jpg') no-repeat center center/cover, var(--secondary-color);
             color: var(--text-color);
-            padding: 10px 0;
+            padding: 20px 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
-        header {
-    background: url('https://shop.lonelyplanet.com/collections/all?sort_by=created-descending&utm_source=lonelyplanet&utm_campaign=homepage&utm_content=homepagemodule') no-repeat center center/cover, var(--secondary-color);
-}
 
         .logo img {
             width: 150px;
@@ -58,7 +54,6 @@
         }
 
         .hero {
-            background: url('hero.jpg') no-repeat center center/cover;
             color: var(--text-color);
             padding: 100px 0;
             text-align: center;
@@ -77,22 +72,6 @@
         .btn:hover {
             background: #e68a00;
             transform: scale(1.1);
-        }
-
-        .notification {
-            position: relative;
-            display: inline-block;
-        }
-
-        .notification .badge {
-            position: sticky;
-            top: -5px;
-            right: -10px;
-            background: rgb(215, 125, 125);
-            color: var(--text-color);
-            border-radius: 50%;
-            padding: 5px 10px;
-            font-size: 12px;
         }
 
         .packages {
@@ -134,14 +113,6 @@
             line-height: 1.4;
         }
 
-        form input, form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 2px solid var(--primary-color);
-            border-radius: 5px;
-        }
-
         footer {
             background: var(--secondary-color);
             color: var(--text-color);
@@ -167,10 +138,6 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
-            <div class="notification-badge">
-            <!-- Using Unicode for a bell icon (or you can use a font like Font Awesome) -->
-            <span class="bell-icon">🔔</span>
-            <span class="badge">5</span>
         </div>
     </header>
 
