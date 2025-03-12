@@ -156,6 +156,7 @@
     </style>
 </head>
 <body>
+    <!-- Task: Add a notification badge with a bell icon -->
     <header>
         <div class="container">
             <div class="logo">
@@ -172,10 +173,17 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
-            <div class="notification">
-                🔔
-                <span class="badge">3</span>
-            </div>
+            
+            <svg width="50" height="50" viewBox="0 0 50 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="48" height="48" rx="24" fill="black" fill-opacity="0.1"></rect>
+                <path d="M18.4167 29.4041V28.3208H19.2564V22.9362C19.2564 21.7599 19.6266 20.7308 20.367 19.8489C21.1074 18.9669 22.0545 18.4335 23.2084 18.2487V17.2087C23.2084 16.9888 23.2852 16.8018 23.439 16.6479C23.5927 16.494 23.7794 16.417 23.9991 16.417C24.2187 16.417 24.4057 16.494 24.5601 16.6479C24.7145 16.8018 24.7916 16.9888 24.7916 17.2087V18.2487C25.9455 18.4335 26.8926 18.9669 27.633 19.8489C28.3734 20.7308 28.7436 21.7599 28.7436 22.9362V28.3208H29.5833V29.4041H18.4167ZM23.9942 31.7439C23.6241 31.7439 23.3093 31.6127 23.0497 31.3503C22.7901 31.088 22.6603 30.7726 22.6603 30.4041H25.3397C25.3397 30.7781 25.208 31.0948 24.9445 31.3545C24.681 31.6141 24.3642 31.7439 23.9942 31.7439Z" fill="black"></path>
+                <rect x="35" y="1" width="10" height="10" rx="5" fill="#E10E0E" stroke="white" stroke-width="2"></rect>
+              </svg>
+
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.5" y="0.5" width="47" height="47" rx="23.5" stroke="black" stroke-opacity="0.1"/>
+                <path d="M31.6 33L25.3 26.7C24.8 27.1 24.225 27.4167 23.575 27.65C22.925 27.8833 22.2333 28 21.5 28C19.6833 28 18.1458 27.3708 16.8875 26.1125C15.6292 24.8542 15 23.3167 15 21.5C15 19.6833 15.6292 18.1458 16.8875 16.8875C18.1458 15.6292 19.6833 15 21.5 15C23.3167 15 24.8542 15.6292 26.1125 16.8875C27.3708 18.1458 28 19.6833 28 21.5C28 22.2333 27.8833 22.925 27.65 23.575C27.4167 24.225 27.1 24.8 26.7 25.3L33 31.6L31.6 33ZM21.5 26C22.75 26 23.8125 25.5625 24.6875 24.6875C25.5625 23.8125 26 22.75 26 21.5C26 20.25 25.5625 19.1875 24.6875 18.3125C23.8125 17.4375 22.75 17 21.5 17C20.25 17 19.1875 17.4375 18.3125 18.3125C17.4375 19.1875 17 20.25 17 21.5C17 22.75 17.4375 23.8125 18.3125 24.6875C19.1875 25.5625 20.25 26 21.5 26Z" fill="black"/>
+                </svg>
         </div>
     </header>
 
@@ -210,6 +218,29 @@
                     <a href="#" class="btn">View Details</a>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Task 10: Form elements with styled borders -->
+    <section class="contact-form">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Task 13: Paragraph with adjusted letter-spacing and line-height -->
+    <section class="readability-demo">
+        <div class="container">
+            <h2>Welcome to GT Holidays</h2>
+            <p>
+                GT Holidays Pvt. Ltd is a subsidiary of Sangam Group of Hotels, one of the biggest hotel chains in south Tamil Nadu. The Sangam Group of Hotels founded in 1968 has for forty years provided impeccable service and outstanding hospitality. It currently has 19 properties in Tamil Nadu. GT Holidays Pvt. Ltd built on this strong foundation aims to provide great customer satisfaction and an exemplary holiday experience. Planning a once in a lifetime holiday or a yearly corporate retreat? No problem! GT Holidays can get you what you want and in the minimal time. One of the best destination management companies in South India, it has the experience and infrastructure to handle any customer demand. In addition to destination management, GT Holidays also plans corporate tours, incentive trips, college/school excursions, business travel, arranges car/railway & hotel bookings and much, much more.
+            </p>
         </div>
     </section>
 
