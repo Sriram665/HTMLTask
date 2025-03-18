@@ -1,340 +1,587 @@
 
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Orderific Pricing</title>
-  <link rel="stylesheet" href="pricing.css"/>
+    <!-- head of the file -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="pricing.css">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet"> -->
+
 </head>
 
-<style>/* ------------------------------
-    1. GLOBAL RESETS & BASE
- ------------------------------ */
- * {
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
-   }
+<style>@font-face {
+    font-family: 'Metropolis';
+    src: url('metropolis/Metropolis-Thin.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Metropolis';
+    src: url('metropolis/Metropolis-ThinItalic.otf') format('opentype');
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'Metropolis';
+    src: url('metropolis/Metropolis-ExtraLight.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Metropolis';
+    src: url('metropolis/Metropolis-ExtraLightItalic.otf') format('opentype');
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'Metropolis';
+    src: url('metropolis/Metropolis-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Metropolis';
+    src: url('metropolis/Metropolis-LightItalic.otf') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'Metropolis';
+    src: url('metropolis/Metropolis-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Metropolis';
+    src: url('metropolis/Metropolis-RegularItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'Metropolis';
+    src: url('metropolis/Metropolis-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Metropolis';
+    src: url('metropolis/Metropolis-MediumItalic.otf') format('opentype');
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'Metropolis';
+    src: url('metropolis/Metropolis-SemiBold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Metropolis';
+    src: url('metropolis/Metropolis-SemiBoldItalic.otf') format('opentype');
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'Metropolis';
+    src: url('metropolis/Metropolis-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Metropolis';
+    src: url('metropolis/Metropolis-BoldItalic.otf') format('opentype');
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'Metropolis';
+    src: url('metropolis/Metropolis-ExtraBold.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Metropolis';
+    src: url('metropolis/Metropolis-ExtraBoldItalic.otf') format('opentype');
+    font-weight: 800;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'Metropolis';
+    src: url('metropolis/Metropolis-Black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Metropolis';
+    src: url('metropolis/Metropolis-BlackItalic.otf') format('opentype');
+    font-weight: 900;
+    font-style: italic;
+  }
+body {
+    font-family: Metropolis, sans-serif;
+    line-height: 1.6;
    
-   body {
-     font-family: 'Poppins', sans-serif;
-     background-color: #f8f8f8;
-     color: #333;
-   }
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    border-bottom: 2px solid #f5f5f5;
+    padding: 10px 0;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: #ff4d4d;
+    font-size: 24px;
+}
+
+nav a {
+    color: #ff4d4d;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 14px;
+}
+
+/* Main Content - Pricing Header */
+.sub{
+    font-weight: 400;
+    line-height: 1.65em;
+    color: #3F3F3F;
+    font-size: 18px;
+}
+.pricing-header {
+    text-align: center;
+    padding: 40px 20px;
+    
+}
+
+.pricing-header h2 {
+    font-size: 70px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 800;
+    line-height: 65px;
+}
+.pricing-header h2 b {
+    font-size: 50px;
+    color: #ff4d4d;
+    margin-bottom: 10px;
+}
+
+
+
+/* Pricing Plans */
+.pricing-plans {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* padding: 20px; */
+    display: flex;
+    gap: 8px 10px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.price-icon {
+    height: 48px; 
+    width: 48px; 
+    vertical-align: middle; 
+    margin-right: 10px; 
+}
+
+.plan {
+    background-color: #fff;
+    border: 1px solid #EDEDED;
+    border-radius: 24px;
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0px 2px 12px 0px rgba(16, 16, 16, 0.08);
+    
+}
+
+.plan h3 {
+    font-size: 18px;
+    color: #656565;
+    margin-bottom: 0px;
+    line-height: 1em;
+    font-weight: 800;
+    margin-left: 5px;
+}
+
+.plan .price {
+    font-size: 28px;
+    color: #121212;
+    margin:  0px;
+    display: inline-flex; 
+    align-items: center;
+    font-weight: 800;
+    
+}
+ i {
+    color: #ff4d4d;
+    margin-right: 4px;
    
-   /* Center the entire block on the page */
-   .page-center {
-     display: flex;
-     justify-content: center;
-     align-items: flex-start;
-     min-height: 100vh;
-     padding-top: 40px;
-   }
-   
-   /* ------------------------------
-      2. PRICING WRAPPER
-   ------------------------------ */
-   .pricing-wrapper {
-     position: relative;
-     width: 490px; /* Adjust for perfect match */
-   }
-   
-   /* Circular Badge (light color + orange text) */
-   .badge-circle {
-     position: absolute;
-     top: -20px;
-     left: -60px;
-     width: 100px;
-     height: 100px;
-     background: #FFF0EC; /* Lighter shade */
-     color: #FF5733;      /* Orange text */
-     font-size: 12px;
-     font-weight: 600;
-     text-align: center;
-     border-radius: 50%;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     line-height: 1.2;
-     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-     z-index: 10;
-   }
-   
-   /* ------------------------------
-      3. PRICING CARD
-   ------------------------------ */
-   .pricing-card {
-     background: #fff;
-     border-radius: 12px;
-     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-     padding: 20px;
-   }
-   
-   /* Plan Header */
-   .plan-header {
-     text-align: center;
-     margin-bottom: 20px;
-   }
-   
-   /* Icon + Plan Title on same row */
-   .plan-header-top {
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     gap: 8px;
-     margin-bottom: 8px;
-   }
-   
-   .dollar-icon {
-     width: 40px;
-     height: 40px;
-   }
-   
-   .plan-header h3 {
-     font-size: 20px;
-     color: #656565;
-     margin: 0;
-   }
-   
-   .plan-header h2 {
-     font-size: 28px;
-     color: #222;
-     font-weight: bold;
-     margin: 5px 0;
-   }
-   
-   .subtitle {
-     font-size: 14px;
-     color: #656565;
-     margin-top: 6px;
-     line-height: 1.4;
-   }
-   
-   /* CTA Button */
-   .cta-button {
-     display: block;
-     margin: 0 auto 20px auto;
-     background: #FF5733;
-     color: #fff;
-     font-size: 16px;
-     border: none;
-     border-radius: 10px;
-     padding: 12px 20px;
-     cursor: pointer;
-     transition: background 0.3s ease-in-out;
-   }
-   .cta-button:hover {
-     background: #e14f2f;
-   }
-   
-   /* ------------------------------
-      4. FEATURES SECTION
-   ------------------------------ */
-   .features {
-     margin-bottom: 20px;
-   }
-   
-   .features h4 {
-     font-size: 20px;
-     color: #121212;
-     margin-bottom: 10px;
-   }
-   
-   .features ul {
-     list-style: none;
-   }
-   
-   .features ul li {
-     display: flex;
-     align-items: flex-start;
-     gap: 10px;
-     margin-bottom: 12px;
-     font-size: 15px;
-     line-height: 1.4;
-   }
-   
-   /* Checkmark styling */
-   .checkmark {
-     color: #FF5733;
-     font-weight: bold;
-     font-size: 18px;
-     margin-top: 3px;
-   }
-   
-   /* Bold title and desc */
-   li strong {
-     color: #000;
-     font-weight: 600;
-   }
-   
-   .desc {
-     color: #666;
-     font-size: 14px;
-   }
-   
-   /* Wrap feature text in a div to align below the bold title */
-   li div {
-     display: inline-block;
-   }
-   
-   .more {
-     margin-top: 10px;
-     font-size: 14px;
-     color: #666;
-     text-align: right;
-   }
-   
-   /* ------------------------------
-      5. VISIONARY SECTION
-   ------------------------------ */
-   .visionary {
-     padding: 15px;
-     border-radius: 8px;
-   }
-   
-   .visionary h4 {
-     font-size: 16px;
-     color: #222;
-     margin-bottom: 6px;
-   }
-   
-   .visionary p {
-     font-size: 14px;
-     color: #666;
-     line-height: 1.4;
-   }
-   </style>
+}
+.bottom-2ndprice2{
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+    margin-bottom: 0;
+    line-height: 30px;
+    color: #121212;
+    font-weight: 400;
+    font-size: 18px;
+}
+.bottom-2ndprice {
+    font-size: 22px;
+    text-align: left;
+    margin-bottom: 24px;
+    font-weight: 700;
+    line-height: 40px;
+    color: #121212;
+}
+.heading {
+    font-size: 18px;
+    color: #121212;
+    font-weight: 800;
+    line-height: 20px;
+    margin-bottom: 4px;
+    text-align: left;
+    margin-left: 9px;
+}
+.heading2 {
+    font-size: 18px;
+    font-weight: 800;
+    color: #ff4d4d;
+    line-height: 20px;
+    margin-bottom: 4px;
+    text-align: left;
+    margin-left: 9px;
+}
+
+
+
+.plan button {
+    background-color: #FF5634;;
+    color: white;
+    border: none;
+    padding: 30px 75px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 18px;
+    
+    
+}
+
+.plan button:hover {
+    background-color: #e63f3f;
+}
+.short{
+    font-weight: 400;
+    line-height: 1.65em;
+    color: #656565;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.plan h4 {
+    text-align: left;
+    font-size: 22px;
+    font-weight: 900;
+    color: #333;
+    margin: 20px 0 20px;
+}
+
+.plan ul {
+    list-style-type: none;
+    text-align: left;
+    padding-left: 0px;
+}
+
+.plan li {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 24px;
+    line-height: 20px;
+}
+.im {
+    max-width: 20px;
+    max-height: 20px;
+    vertical-align: middle;
+}
+.batch{
+    max-width: 160px;
+    max-height: 160px;
+    z-index: 30;
+    position: absolute;
+    margin-top: -75px;
+    margin-left: -72px;
+}
+.article {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 0;
+    text-align: left;
+    font-style: italic;
+    margin-left: 30px;
+    color: #121212;
+}
+
+/* Call to Action */
+.call-to-action {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin: 20px 0;
+    font-size: 16px;
+    color: #666;
+}
+
+/* FAQs */
+.faqs {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.faqs h2 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item h3 {
+    font-size: 18px;
+    color: #ff4d4d;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    font-size: 14px;
+    color: #666;
+}
+
+
+
+@media (max-width: 1024px) {
+
+  .plan {
+    background-color: #fff;
+    border: 1px solid #EDEDED;
+    border-radius: 24px;
+    padding: 30px;
+    width: 40%;
+    max-width: 100%;
+    text-align: center;
+    box-shadow: 0px 2px 12px 0px rgba(16, 16, 16, 0.08);
+    
+  }
+  .plan button {
+    background-color: #FF5634;;
+    color: white;
+    border: none;
+    padding: 25px 60px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 18px;
+    
+    
+  }
+  .batch{
+    max-width: 110px;
+    max-height: 110px;
+    z-index: 30;
+    position: absolute;
+    margin-top: -38px;
+    margin-left: -6px;
+}
+
+}
+
+@media (max-width: 780px) {
+
+  .batch{
+    max-width: 90px;
+    max-height: 90px;
+    z-index: 30;
+    position: absolute;
+    margin-top: -38px;
+    margin-left: -13px;
+}
+
+
+.pricing-header h2 {
+  font-size: 40px;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 800;
+  line-height: 45px;
+}
+.plan {
+  background-color: #fff;
+  border: 1px solid #EDEDED;
+  border-radius: 24px;
+  padding: 30px;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  box-shadow: 0px 2px 12px 0px rgba(16, 16, 16, 0.08);
+  
+}
+.plan button {
+  background-color: #FF5634;;
+  color: white;
+  border: none;
+  padding: 20px 55px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 18px;
+  
+  
+}
+
+}</style>
 
 <body>
-
-  <!-- Main Container (Center in page) -->
-  <div class="page-center">
-
-    <!-- Pricing Card Container -->
-    <div class="pricing-wrapper">
-
-      <!-- Circular Badge (Lighter color + Orange text) -->
-      <div class="badge-circle">
-        No Setup Fee <br> or <br> Binding Contracts
-      </div>
-
-      <!-- Main Card -->
-      <div class="pricing-card">
-
-        <!-- Plan Header: Dollar Icon at the Start -->
-        <div class="plan-header">
-          <div class="plan-header-top">
-            <img src="https://orderific.com/ord-website/assets/img/pricing/logo/icon4.png" alt="Dollar Icon" class="dollar-icon"/>
-            <h3>Full/Pro Plan</h3>
-          </div>
-          <h2>$99/month</h2>
-          <p class="subtitle">
-            Become a culinary sensation with Orderific’s Full Plan at just 99$/month.
-          </p>
+    <!-- Header -->
+    <header>
+        <div class="">
+            <h1></h1>
+            <nav>
+                <a href="#"></a> 
+                <a href="#"></a> 
+                <a href="#"></a> 
+                <a href="#"></a> 
+                <a href="#"></a> 
+                <a href="#"></a> 
+                <a href="#"></a>
+            </nav>
         </div>
+    </header>
 
-        <!-- CTA Button -->
-        <button class="cta-button">Get Started</button>
+    <!-- Main Content -->
+    <main class="wrapper">
 
-        <!-- Key Features -->
-        <div class="features">
-          <h4><b>Key features:</b></h4>
-          <ul>
-            <li>
-              <div class="checkmark">✔</div>
-              <div>
-                <strong>Digital Smart Menu</strong><br>
-                <span class="desc"><i>Interactive menu system with real-time updates.</i></span>
-              </div>
-            </li>
-            <li>
-              <span class="checkmark">✔</span>
-              <div>
-                <strong>Loyalty Program</strong><br>
-                <span class="desc"><i>Features for rewarding and retaining customers.</i></span>
-              </div>
-            </li>
-            <li>
-              <span class="checkmark">✔</span>
-              <div>
-                <strong>Business Analytics</strong><br>
-                <span class="desc"><i>Tools for analyzing and strategizing business data.</i></span>
-              </div>
-            </li>
-            <li>
-              <span class="checkmark">✔</span>
-              <div>
-                <strong>Loyalty Program</strong><br>
-                <span class="desc"><i>Features for rewarding and retaining customers.</i></span>
-              </div>
-            </li>
-            <li>
-              <span class="checkmark">✔</span>
-              <div>
-                <strong>Website Builder</strong><br>
-                <span class="desc"><i>Tools for creating a dynamic online presence.</i></span>
-              </div>
-            </li>
-            <li>
-              <span class="checkmark">✔</span>
-              <div>
-                <strong>Integrated Payment Options</strong><br>
-                <span class="desc"><i>Diverse payment methods for customer convenience.</i></span>
-              </div>
-            </li>
-            <li>
-              <span class="checkmark">✔</span>
-              <div>
-                <strong>Delivery System Setup</strong><br>
-                <span class="desc"><i>Tools for establishing and managing delivery services.</i></span>
-              </div>
-            </li>
-            <li>
-              <span class="checkmark">✔</span>
-              <div>
-                <strong>Marketing Tools</strong><br>
-                <span class="desc"><i>Resources to enhance marketing reach and effectiveness.</i></span>
-              </div>
-            </li>
-            <li>
-              <span class="checkmark">✔</span>
-              <div>
-                <strong>Menu Translation</strong><br>
-                <span class="desc"><i>Feature to translate menus into multiple languages.</i></span>
-              </div>
-            </li>
-            <li>
-              <span class="checkmark">✔</span>
-              <div>
-                <strong>Clear Reporting</strong><br>
-                <span class="desc"><i>Stay informed with straightforward analytics.</i></span>
-              </div>
-            </li>
-            <li>
-              <span class="checkmark">✔</span>
-              <div>
-                <strong>Seamless POS Integration</strong><br>
-                <span class="desc"><i>Efficient integration with point-of-sale systems.</i></span>
-              </div>
-            </li>
-          </ul>
-          <p class="more">...and much more!</p>
-        </div>
+        <section class="pricing-plans">
+            <img src="https://html-css-bay-two.vercel.app/Day2CSS/icon7.png" class="batch" alt="top-bach">
+            <!-- Full Plan -->
+            <div class="plan">
+                <h3>Full Plan</h3>
+                <p class="price"><img src="https://orderific.com/ord-website/assets/img/pricing/logo/icon4.png" alt="Dollar Icon" class="price-icon">$99/month</p>
+                <p class="short">Become a culinary sensation with Orderific Full Plan for just $99/month.</p>
+                <button>Get Started</button>
+                <h4>Key Features:</h4>
+                <ul>
+                    <li>
+                        <img class="im" src="https://html-css-bay-two.vercel.app/Day2CSS/Check.svg" alt="check-icon"> <b class="heading">Digital Smart Menu</b><br><b
+                            class="article"> Digital Smart Menu with real-time updates</b>
+                    </li>
+                    <li>
+                        <img class="im" src="https://html-css-bay-two.vercel.app/Day2CSS/Check.svg" alt="check-icon"><b class="heading">Business Analytics</b><br> <b
+                            class="article">Business Analytics for understanding and
+                        retaining customers</b>
+                    </li>
+                    <li>
+                        <img  class="im" src="https://html-css-bay-two.vercel.app/Day2CSS/Check.svg" alt="check-icon"><b class="heading">Loyalty Program</b><br><b
+                            class="article"> Loyalty Program for engaging and retaining
+                        business data</b>
+                    </li>
+                    <li>
+                        <img class="im" src="https://html-css-bay-two.vercel.app/Day2CSS/Check.svg" alt="check-icon"><b class="heading">Website Builder</b><br><b
+                            class="article"> Website Builder for creating a dynamic online
+                        presence</b>
+                    </li>
+                    <li>
+                        <img class="im" src="https://html-css-bay-two.vercel.app/Day2CSS/Check.svg" alt="check-icon"> <b class="heading">Integrated Payment Options</b><br><b
+                            class="article">Integrated Payment Options</b>
+                    </li>
+                    <li>
+                        <img class="im" src="https://html-css-bay-two.vercel.app/Day2CSS/Check.svg" alt="check-icon"><b class="heading">Delivery System Setup</b><br><b
+                            class="article">Delivery System for customer
+                        convenience</b>
+                    </li>
+                    <li>
+                        <img class="im" src="https://html-css-bay-two.vercel.app/Day2CSS/Check.svg" alt="check-icon"><b class="heading">Marketing Tools</b><br><b
+                            class="article"> Marketing Tools for managing sales
+                        effectiveness</b>
+                    </li>
+                    <li>
+                        <img class="im" src="https://html-css-bay-two.vercel.app/Day2CSS/Check.svg" alt="check-icon"><b class="heading">Menu Translation</b><br> <b
+                            class="article">Menu Translation</b>
+                    </li>
+                    <li>
+                        <img class="im" src="https://html-css-bay-two.vercel.app/Day2CSS/Check.svg" alt="check-icon"><b class="heading">Clear Reporting</b><br><b
+                            class="article"> Clear Reporting</b>
+                    </li>
+                    <li>
+                        <img class="im" src="https://html-css-bay-two.vercel.app/Day2CSS/Check.svg" alt="check-icon"><b class="heading">Seamless POS Integration</b><br><b
+                            class="article"> Seamless POS Integration with
+                        point-of-sale systems</b>
+                    </li>
+                    <li>
+                        <br><b class="bottom-2ndprice">Ideal for Visionary Restaurateurs:</b>
+                        <p class="bottom-2ndprice2">Choose this plan to elevate your dining experience and set your
+                            restaurant apart. Ideal for combining technology and insights to grow your business.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
 
-        <!-- Visionary Section -->
-        <div class="visionary">
-          <h4>Ideal for Visionary Restaurateurs:</h4>
-          <p>
-            Choose this plan to elevate your dining experience and set your restaurant apart.
-            Ideal for combining technology and insights to grow your business.
-          </p>
-        </div>
-
-      </div> <!-- End pricing-card -->
-    </div> <!-- End pricing-wrapper -->
-
-  </div> <!-- End page-center -->
 
 </body>
+
 </html>
