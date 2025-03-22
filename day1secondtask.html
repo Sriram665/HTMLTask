@@ -1,64 +1,75 @@
+<!-- Task 1: Create a simple user registration form with validation -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tasks 1 to 5</title>
+    <title>HTML5 and CSS3 Tasks</title>
+    <style>
+        form {
+            max-width: 400px;
+            margin: auto;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        label, input {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
+    <h1>HTML5 Forms and Multimedia</h1>
     
-    <!-- Task 1: User Registration Form with Validation -->
-    <h1>Welcome to WSP</h1>
-    <h3>Manage, Streamline and Thrive Effortlessly</h3>
-    <form action="/submit_registration" method="post">
-
+    <h2>Task 1: User Registration Form</h2>
+    <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
-
+        <input type="email" id="email" name="email" required>
+        
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
-
-        <input type="checkbox" id="remember_me" name="remember_me">
-        <label for="remember_me">Remember me</label>
-        <a href="#" style="margin-left: 10px;">Login with Code</a><br><br>
-
-        <input type="submit" value="Sign in">
+        <input type="password" id="password" name="password" required>
+        
+        <button type="submit">Register</button>
     </form>
 
-    <script>
-        // Task 1: Validation for Password Match
-        const form = document.querySelector('form');
-        form.addEventListener('submit', function(event) {
-            const password = document.getElementById('password').value;
-            const confirmPassword = document.getElementById('confirm_password').value;
-            if (password !== confirmPassword) {
-                alert('Passwords do not match!');
-                event.preventDefault();
-            }
-        });
-    </script>
-
-    <!-- Task 2: Video and Audio Player -->
-    <h2>Customer Testimony Video</h2>
+<!-- Task 2: Add a video and audio player with controls -->
+    <h2>Task 2: Video and Audio Player</h2>
     <video width="320" height="240" controls>
-        <source src="sample-video.mp4" type="video/mp4">
+        <source src="sample.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-
-    <h2>Audio Player</h2>
+    
     <audio controls>
-        <source src="sample-audio.mp3" type="audio/mpeg">
+        <source src="sample.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
 
-    <!-- Task 3: SVG Icon -->
-    <h2>Discover WHY Orderific is
-        Your Restaurant's Best Friend</h2>
-    <img src="https://orderific.com/ord-website/assets/img/hero-section/hero-sm.webp" alt="" class="mob-img1">
+<!-- Task 3: Get and display any SVG icon -->
+    <h2>Task 3: SVG Icon</h2>
+    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.5" y="0.5" width="47" height="47" rx="23.5" stroke="black" stroke-opacity="0.1"></rect>
+        <path d="M31.6 33L25.3 26.7C24.8 27.1 24.225 27.4167 23.575 27.65C22.925 27.8833 22.2333 28 21.5 28C19.6833 28 18.1458 27.3708 16.8875 26.1125C15.6292 24.8542 15 23.3167 15 21.5C15 19.6833 15.6292 18.1458 16.8875 16.8875C18.1458 15.6292 19.6833 15 21.5 15C23.3167 15 24.8542 15.6292 26.1125 16.8875C27.3708 18.1458 28 19.6833 28 21.5C28 22.2333 27.8833 22.925 27.65 23.575C27.4167 24.225 27.1 24.8 26.7 25.3L33 31.6L31.6 33ZM21.5 26C22.75 26 23.8125 25.5625 24.6875 24.6875C25.5625 23.8125 26 22.75 26 21.5C26 20.25 25.5625 19.1875 24.6875 18.3125C23.8125 17.4375 22.75 17 21.5 17C20.25 17 19.1875 17.4375 18.3125 18.3125C17.4375 19.1875 17 20.25 17 21.5C17 22.75 17.4375 23.8125 18.3125 24.6875C19.1875 25.5625 20.25 26 21.5 26Z" fill="black"></path>
+    </svg>
 
-    <!-- Task 4: Embedded YouTube Video -->
-    <h2>Embedded YouTube Video</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/watch?v=dL9Ey1mQT0k" frameborder="0" allowfullscreen></iframe>
+<!-- Task 4: Embed a YouTube video in a webpage using <iframe> -->
+    <h2>Task 4: Embedded YouTube Video</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
 
+<!-- Task 5: Create a Signin Form of WSP without any styling -->
+    <h2>Task 5: WSP Signin Form</h2>
+    <form>
+        <label for="wsp-username">Username:</label>
+        <input type="text" id="wsp-username" name="wsp-username">
+        
+        <label for="wsp-password">Password:</label>
+        <input type="password" id="wsp-password" name="wsp-password">
+        
+        <button type="submit">Sign In</button>
+    </form>
 </body>
 </html>
